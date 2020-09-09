@@ -5,7 +5,7 @@ class Application
     if req.path.match(/items/)
       i = nil 
       @@items.each do |it|
-        if it.name.to_s = req.path.to_s[7...]
+        if it.name.to_s == req.path.to_s[7...]
           i = it 
         end 
       end 
