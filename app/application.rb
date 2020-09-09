@@ -7,16 +7,16 @@ class Application
       req.each do |par|
         resp.write "#{par}"
       end 
-      # resp.write "#{allo}"
-    #   if @@items.include?(allo)
-    #     resp.write "#{allo}"
-    #   else 
-    #     resp.write "Item not found"
-    #     resp.status = 400
-    #   end 
-    # else 
-    #   resp.write "Route not found"
-    #   resp.status = 404
+      resp.write "#{allo}"
+      if @@items.include?(allo)
+        resp.write "#{allo}"
+      else 
+        resp.write "Item not found"
+        resp.status = 400
+      end 
+    else 
+      resp.write "Route not found"
+      resp.status = 404
     end 
     resp.finish
   end 
