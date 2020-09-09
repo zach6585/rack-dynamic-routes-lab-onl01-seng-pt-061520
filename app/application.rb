@@ -9,7 +9,8 @@ class Application
           i = it 
         end 
       end 
-      else 
+      if i != nil 
+        
         resp.write "Item not found"
         resp.status = 400
       end 
