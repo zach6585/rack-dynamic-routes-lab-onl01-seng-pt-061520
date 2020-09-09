@@ -3,13 +3,8 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     if req.path.match(/items/)
-      allo = req.params["q"]
-      req.each do |par|
-        resp.write "#{par}"
-      end 
-      resp.write "#{allo}"
-      if @@items.include?(allo)
-        resp.write "#{allo}"
+      @@items.each do |it|
+        
       else 
         resp.write "Item not found"
         resp.status = 400
