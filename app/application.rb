@@ -8,6 +8,7 @@ class Application
         if it.name.to_s = req.path.to_s[7...]
           i = it 
         else 
+          
         end 
       end 
       
