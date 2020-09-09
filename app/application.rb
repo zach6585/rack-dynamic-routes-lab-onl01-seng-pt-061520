@@ -5,7 +5,7 @@ class Application
     if req.path.match(/items/)
       @@items.each do |it|
         if it.name.to_s = req.path.to_s[7...]
-          
+          resp.write()
       else 
         resp.write "Item not found"
         resp.status = 400
