@@ -3,7 +3,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     if req.path.match(/items/)
-      i = Null 
+      i = nil 
       @@items.each do |it|
         if it.name.to_s = req.path.to_s[7...]
           resp.write(it.price)
