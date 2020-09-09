@@ -7,12 +7,14 @@ class Application
       @@items.each do |it|
         if it.name.to_s = req.path.to_s[7...]
           i = it 
+        else 
         end 
       end 
-    else 
-      resp.write "Item not found"
-      resp.status = 400
-    end 
+      
+      else 
+        resp.write "Item not found"
+        resp.status = 400
+      end 
     else 
       resp.write "Route not found"
       resp.status = 404
