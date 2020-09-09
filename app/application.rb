@@ -6,7 +6,7 @@ class Application
       i = nil 
       @@items.each do |it|
         if it.name.to_s = req.path.to_s[7...]
-          resp.write(it.price)
+          i = it 
         end 
       end 
     else 
